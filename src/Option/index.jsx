@@ -2,11 +2,15 @@ import React from 'react';
 import Icon from '../Icon/index';
 import './style.css';
 
-const Option = (props) => {
+const Option = ({ type, text, onSelected }) => {
+  const handleClick = () => {
+    console.log(text); // Vypíše vybranou odpověď do konzole
+    onSelected(type);
+  };
   return (
-    <div className="option">
-      <Icon type={props.type} />
-      <div>{props.text}</div>
+    <div className="option" onClick={handleClick}>
+      <Icon type={type} />
+      <div>{text}</div>
     </div>
   );
 };

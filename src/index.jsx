@@ -10,6 +10,5 @@ const App = () => {
     </div>
   );
 };
-  
 
 createRoot(document.querySelector('#app')).render(<App />);
